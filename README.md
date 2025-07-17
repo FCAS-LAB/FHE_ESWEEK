@@ -10,10 +10,9 @@ This repository provides a Python-based framework for Design Space Exploration (
 - **Modular Structure**: Easy to extend for new strategies or applications.
 
 # How to use
-```
+````
 git clone https://github.com/FCAS-LAB/FHE_ESWEEK.git
 cd Bilevel
 bash scripts/run.sh
 # python main.py --time_file=... --bench_file=... --trace_file=... --topo_file=... --show_file=...
-```"# FHE_ESWEEK" 
-"# FHE_ESWEEK" 
+```
