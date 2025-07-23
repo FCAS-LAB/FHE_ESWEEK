@@ -37,11 +37,11 @@ Using the commands below will execute all the experiments regarding CKKS_ResNet5
 - **CKKS_ResNet50:**
 ```bash
 python main.py \
-  --time_file="./src/ResNet50/ResNet50_time.txt" \
-  --bench_file="./src/ResNet50/ResNet50_bench.txt" \
-  --trace_file="./src/ResNet50/ResNet50_trace.txt" \
-  --topo_file="./src/ResNet50/ResNet50_gv.txt" \
-  --show_file="./src/ResNet50/ResNet50_show.txt"
+  --time_file="./src/Resnet50/Resnet50_time.txt" \
+  --bench_file="./src/Resnet50/Resnet50_bench.txt" \
+  --trace_file="./src/Resnet50/Resnet50_trace.txt" \
+  --topo_file="./src/Resnet50/Resnet50_gv.txt" \
+  --show_file="./src/Resnet50/Resnet50_show.txt"
 ```
 
 - **CKKS_CNN:**
@@ -67,11 +67,11 @@ python main.py \
 - **CKKS_VGG:**
 ```bash
 python main.py \
-  --time_file="./src/VGG/VGG_time.txt" \
-  --bench_file="./src/VGG/VGG_bench.txt" \
-  --trace_file="./src/VGG/VGG_trace.txt" \
-  --topo_file="./src/VGG/VGG_gv.txt" \
-  --show_file="./src/VGG/VGG_show.txt"
+  --time_file="./src/MLP/MLP_time.txt" \
+  --bench_file="./src/MLP/MLP_bench.txt" \
+  --trace_file="./src/MLP/MLP_trace.txt" \
+  --topo_file="./src/MLP/MLP_gv.txt" \
+  --show_file="./src/MLP/MLP_show.txt"
 ```
 
 ## Output Interpretation
