@@ -91,5 +91,5 @@ e_weight = {
 }
 e_weight = modify_e_weight(e_weight)
 result = mapping(num_nodes, s, s_weight, lis_num_core, lis_num_d2d, e, e_weight)
-print("-------------mapping result-------------")
-print(result)
+# print("-------------mapping result-------------")
+# print(result)

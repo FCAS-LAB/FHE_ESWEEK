@@ -20,7 +20,7 @@ def main():
 
     print("Bilevel Algorithm:")
     bilevel(args.time_file, args.bench_file, args.trace_file, args.topo_file, args.show_file)
-    print("-----------------------------------------------------")
+    print("\n================ Ablation Experiments ================")
     print("Mapping Ablation:")
     mapping_ablation(args.time_file, args.bench_file)
     print("-----------------------------------------------------")

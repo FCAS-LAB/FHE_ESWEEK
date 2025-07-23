@@ -20,40 +20,32 @@ This framework was developed and tested in the following environment:
 
 ## Getting Started
 
-To run the program, follow the steps below for either **script execution** or **manual command execution**.
-
-### Run via Script
-
-```sh
+### 1. Clone Repository
+```bash
 git clone https://github.com/FCAS-LAB/FHE_ESWEEK.git
 cd FHE_ESWEEK
+```
+
+### 2. Run CKKS_Resnet50 Demo (Bilevel Optimization Algorithm + Ablation Experiments)
+```bash
 bash run.sh
 ```
 
-This script will run and display the optimization process for ResNet50.
+### 3. Run Individual Benchmarks
+Using the commands below will execute all the experiments regarding CKKS_ResNet50, CKKS_CNN, CKKS_MLP, CKKS_VGG in this paper, including detailed bilevel optimization process and corresponding ablation experiments.
 
-### Run via Terminal Command
-
-You can also run ResNet50 and other benchmarks (e.g., CNN) using command line.
-
-- To run ResNet50:
-
-```sh
-git clone https://github.com/FCAS-LAB/FHE_ESWEEK.git
-cd FHE_ESWEEK
+- **CKKS_ResNet50:**
+```bash
 python main.py \
-  --time_file="./src/Resnet50/Resnet50_time.txt" \
-  --bench_file="./src/Resnet50/Resnet50_bench.txt" \
-  --trace_file="./src/Resnet50/Resnet50_trace.txt" \
-  --topo_file="./src/Resnet50/Resnet50_gv.txt" \
-  --show_file="./src/Resnet50/Resnet50_show.txt"
+  --time_file="./src/ResNet50/ResNet50_time.txt" \
+  --bench_file="./src/ResNet50/ResNet50_bench.txt" \
+  --trace_file="./src/ResNet50/ResNet50_trace.txt" \
+  --topo_file="./src/ResNet50/ResNet50_gv.txt" \
+  --show_file="./src/ResNet50/ResNet50_show.txt"
 ```
 
-- To run CNN:
-
-```sh
-git clone https://github.com/FCAS-LAB/FHE_ESWEEK.git
-cd FHE_ESWEEK
+- **CKKS_CNN:**
+```bash
 python main.py \
   --time_file="./src/CNN/CNN_time.txt" \
   --bench_file="./src/CNN/CNN_bench.txt" \
@@ -62,11 +54,8 @@ python main.py \
   --show_file="./src/CNN/CNN_show.txt"
 ```
 
-- To run MLP:
-
-```sh
-git clone https://github.com/FCAS-LAB/FHE_ESWEEK.git
-cd FHE_ESWEEK
+- **CKKS_MLP:**
+```bash
 python main.py \
   --time_file="./src/MLP/MLP_time.txt" \
   --bench_file="./src/MLP/MLP_bench.txt" \
@@ -75,15 +64,44 @@ python main.py \
   --show_file="./src/MLP/MLP_show.txt"
 ```
 
-- To run VGG:
-
-```sh
-git clone https://github.com/FCAS-LAB/FHE_ESWEEK.git
-cd FHE_ESWEEK
+- **CKKS_VGG:**
+```bash
 python main.py \
   --time_file="./src/VGG/VGG_time.txt" \
   --bench_file="./src/VGG/VGG_bench.txt" \
   --trace_file="./src/VGG/VGG_trace.txt" \
   --topo_file="./src/VGG/VGG_gv.txt" \
   --show_file="./src/VGG/VGG_show.txt"
+```
+
+## Output Interpretation
+
+### Bilevel Optimization Report
+```
+================ Running Bilevel Algorithm ================
+# Iteration progress with time consumption updates
+the original total time consumption: ... 
+total time consumption after optimization iter 0: ...
+total time consumption after optimization iter 1: ...
+...
+final optimized performance: ...  # Optimized execution time
+final optimized topology (in the format of adjacency matrix):  # Optimized topology
+1:[...]
+2:[...]
+3:[...]
+...
+90:[...]
+```
+
+### Ablation Studies
+```
+================ Ablation Experiments ================
+Mapping Ablation:
+time consumption of random_mapping + ring-ring topology: ...
+time consumption of proposed mapping + ring-ring topology: ...
+time consumption of random mapping + mesh-mesh topology: ...
+time consumption of proposed mapping + mesh-mesh topology: ...
+-----------------------------------------------------
+Topology Ablation:
+...
 ```

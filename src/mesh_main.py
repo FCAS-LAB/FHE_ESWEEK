@@ -39,4 +39,4 @@ if __name__ == "__main__":
         for pre_node in lis_dep:
             t[pre_node][node] = dist[map_dic[pre_node]][map_dic[node]] + s_weight[pre_node, node] + 1
     tmp_performance = get_earlest_time(num_nodes, t, node_weight, s)[0]
-    print(f's-s的performance：{tmp_performance}')
+    print(f'total time consumption: {tmp_performance}')

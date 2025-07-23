@@ -49,7 +49,7 @@ def mapping_ablation(time_file, bench_file):
         for pre_node in lis_dep:
             t[pre_node][node] = dist[map_dic[pre_node]][map_dic[node]] + s_weight[pre_node, node] + 1
     tmp_performance = get_earlest_time(num_nodes, t, node_weight, s)[0]
-    print(f'random_mapping_ring-ring的performance：{tmp_performance}')
+    print(f'time consumption of random_mapping + ring-ring topology: {tmp_performance}')
 
     # resnet50
     # ring
@@ -78,7 +78,7 @@ def mapping_ablation(time_file, bench_file):
         for pre_node in lis_dep:
             t[pre_node][node] = dist[map_dic[pre_node]][map_dic[node]] + s_weight[pre_node, node] + 1
     tmp_performance = get_earlest_time(num_nodes, t, node_weight, s)[0]
-    print(f'proposed_mapping_ring-ring的performance：{tmp_performance}')
+    print(f'time consumption of proposed mapping + ring-ring topology: {tmp_performance}')
 
     # resnet50
     # mesh
@@ -107,7 +107,7 @@ def mapping_ablation(time_file, bench_file):
         for pre_node in lis_dep:
             t[pre_node][node] = dist[map_dic[pre_node]][map_dic[node]] + s_weight[pre_node, node] + 1
     tmp_performance = get_earlest_time(num_nodes, t, node_weight, s)[0]
-    print(f'random_mapping_mesh-mesh的performance：{tmp_performance}')
+    print(f'time consumption of random mapping + mesh-mesh topology: {tmp_performance}')
 
     # resnet50
     # mesh
@@ -136,7 +136,7 @@ def mapping_ablation(time_file, bench_file):
         for pre_node in lis_dep:
             t[pre_node][node] = dist[map_dic[pre_node]][map_dic[node]] + s_weight[pre_node, node] + 1
     tmp_performance = get_earlest_time(num_nodes, t, node_weight, s)[0]
-    print(f'proposed_mapping_mesh-mesh的performance：{tmp_performance}')
+    print(f'time consumption of proposed mapping + mesh-mesh topology: {tmp_performance}')
 
 if __name__ == "__main__":
     time_file = '../../Resnet50/Resnet50_time.txt'

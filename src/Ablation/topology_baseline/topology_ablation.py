@@ -39,7 +39,7 @@ def topology_ablation(time_file, bench_file):
         for pre_node in lis_dep:
             t[pre_node][node] = dist[map_dic[pre_node]][map_dic[node]] + s_weight[pre_node, node] + 1
     tmp_performance = get_earlest_time(num_nodes, t, node_weight, s)[0]
-    print(f'ring-ring的performance：{tmp_performance}')
+    print(f'time consumption of ring-ring topology: {tmp_performance}')
 
     # mesh
     # 1. 任务图
@@ -62,7 +62,7 @@ def topology_ablation(time_file, bench_file):
         for pre_node in lis_dep:
             t[pre_node][node] = dist[map_dic[pre_node]][map_dic[node]] + s_weight[pre_node, node] + 1
     tmp_performance = get_earlest_time(num_nodes, t, node_weight, s)[0]
-    print(f'mesh-mesh的performance：{tmp_performance}')
+    print(f'time consumption of mesh-mesh topology: {tmp_performance}')
 
     # proposed
     # 1. 任务图
@@ -96,7 +96,7 @@ def topology_ablation(time_file, bench_file):
             tmp_solution[first][second] = tmp_solution[second][first] = e_weight[node, next_node]
 
     performance, solution, dp = greedy(num_nodes, node_weight, s, s_weight, n, num_core, num_d2d, map_dic, num_add_edge_intra, num_add_edge_inter, tmp_performance, tmp_solution)
-    print(f'proposed的performance：{performance}')
+    print(f'final optimized time consumption: {performance}')
 
 if __name__ == "__main__":
     topology_ablation('../../Resnet50/Resnet50_time.txt', '../../Resnet50/Resnet50_bench.txt')

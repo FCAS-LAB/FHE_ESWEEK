@@ -79,7 +79,7 @@ def bilevel(time_file, bench_file, trace_file, topo_file, show_file):
             first = (node[0] - 1) * (num_core + num_d2d) + node[1]
             second = (next_node[0] - 1) * (num_core + num_d2d) + next_node[1]
             tmp_solution[first][second] = tmp_solution[second][first] = e_weight[node, next_node]
-    print(f's-s的performance：{tmp_performance}')
+    print(f'the original total time consumption: {tmp_performance}')
 
     # 5. 贪心搜索
     performance, solution, dp = greedy(num_nodes, node_weight, s, s_weight, n, num_core, num_d2d, map_dic, num_add_edge_intra, num_add_edge_inter, tmp_performance, tmp_solution)
@@ -114,8 +114,8 @@ def bilevel(time_file, bench_file, trace_file, topo_file, show_file):
 
 
 
-    print(f'搜索的performance：{performance}')
-    print('搜索的topology')
+    print(f'final optimized performance: {performance}')
+    print('final optimized topology (in the format of adjacency matrix): ')
     res = []
     for i in range(1 + N):
         res.append([])

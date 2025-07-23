@@ -65,7 +65,7 @@ def greedy(num_nodes, node_weight, s, s_weight, n, num_core, num_d2d, map_dic, n
             print(performance)
             print(solution)
             '''
-            print(f'{(i - 1) * num_add_edge_intra + j} insert:{performance}')
+            print(f'total time consumption after optimization iter {(i - 1) * num_add_edge_intra + j}: {performance}')
 
     for i in range(num_add_edge_inter):
         current_performance = performance
@@ -92,6 +92,6 @@ def greedy(num_nodes, node_weight, s, s_weight, n, num_core, num_d2d, map_dic, n
         '''print("------------------------------------------------------------------------------")
         print(performance)
         print(solution)'''
-        print(f'{num_add_edge_intra * n + i} insert:{performance}')
+        print(f'total time consumption after optimization iter {num_add_edge_intra * n + i}: {performance}')
 
     return performance, solution, copy.deepcopy(dp)
