@@ -67,11 +67,11 @@ python main.py \
 - **CKKS_VGG:**
 ```bash
 python main.py \
-  --time_file="./src/MLP/MLP_time.txt" \
-  --bench_file="./src/MLP/MLP_bench.txt" \
-  --trace_file="./src/MLP/MLP_trace.txt" \
-  --topo_file="./src/MLP/MLP_gv.txt" \
-  --show_file="./src/MLP/MLP_show.txt"
+  --time_file="./src/VGG/VGG_time.txt" \
+  --bench_file="./src/VGG/VGG_bench.txt" \
+  --trace_file="./src/VGG/VGG_trace.txt" \
+  --topo_file="./src/VGG/VGG_gv.txt" \
+  --show_file="./src/VGG/VGG_show.txt"
 ```
 
 ## Output Interpretation
